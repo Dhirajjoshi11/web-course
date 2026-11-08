@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Leipomo-kahvila Voisilmä in Seinäjoki and request a cake order.">
+    <title>Contact | Leipomo-kahvila Voisilmä</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Leipomo-kahvila Voisilmä</h1>
+        <p>Good Food, Fresh Baking, Warm Welcome</p>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="listing.html">Our Menu</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Contact Us</h2>
+
+        <p>We would be happy to hear from you. Contact us if you have questions about our bakery, menu or cake orders.</p>
+
+        <h2>Our Location</h2>
+
+        <p>Leipomo-kahvila Voisilmä</p>
+        <p>Seinäjoki, Finland</p>
+
+        <h2>Opening Hours</h2>
+
+        <table>
+            <caption>Our Opening Hours</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Opening Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Monday – Friday</th>
+                    <td>07:30 – 17:00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Saturday</th>
+                    <td>09:00 – 15:00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Sunday</th>
+                    <td>Closed</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Order a Cake</h2>
+
+        <p>Planning a birthday or another special occasion? You can send us a cake request using the form below.</p>
+
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Your Contact Details</legend>
+
+                <p>
+                    <label for="customer-name">Full Name:</label>
+                    <input type="text" id="customer-name" name="customer-name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Cake Details</legend>
+
+                <p>
+                    <label for="cake-type">Choose a Cake:</label>
+                    <select id="cake-type" name="cake-type" required>
+                        <option value="">Select a cake</option>
+                        <option value="chocolate">Chocolate Cake</option>
+                        <option value="strawberry">Strawberry Cake</option>
+                        <option value="cheesecake">Cheesecake</option>
+                        <option value="custom">Custom Cake</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="cake-size">Cake Size:</label>
+                    <select id="cake-size" name="cake-size" required>
+                        <option value="">Select a size</option>
+                        <option value="small">Small (4–6 people)</option>
+                        <option value="medium">Medium (8–12 people)</option>
+                        <option value="large">Large (15–20 people)</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="pickup-date">Preferred Pickup Date:</label>
+                    <input type="date" id="pickup-date" name="pickup-date" required>
+                </p>
+
+                <p>
+                    <label for="cake-message">Cake Message:</label>
+                    <textarea id="cake-message" name="cake-message" rows="4"></textarea>
+                </p>
+
+                <p>
+                    <label for="additional-info">Additional Information:</label>
+                    <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+                </p>
+            </fieldset>
+
+            <p>
+                <input type="checkbox" id="confirm-details" name="confirm-details" required>
+                <label for="confirm-details">I confirm that the information provided is correct.</label>
+            </p>
+
+            <p>
+                <button type="submit">Send Cake Request</button>
+            </p>
+
+       </form>
+
+</main>
+
+<footer>
+    <p>Leipomo-kahvila Voisilmä</p>
+    <p>Seinäjoki, Finland</p>
+</footer>
+
+</body>
+</html>
