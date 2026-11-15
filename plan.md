@@ -67,8 +67,16 @@ The planned colours are:
 - Dark green:#1f3d2b
 - Cream:#f7f3e8
 - Mustard yellow:#c8902e
-
-I also want to make the website easy to read and navigate. I will use clear headings, descriptive text, semantic HTML elements and properly labelled form fields.
+I will use Georgia for headings and Arial for body text to create a clear and welcoming appearance. I will also make the website responsive so it works on both mobile phones and desktop screens.I also want to make the website easy to read and navigate. I will use clear headings, descriptive text, semantic HTML elements and properly labelled form fields.
 
 ## 6. Development Plan
 I will build the website step by step.
+
+1. Create the four HTML pages and add the main content.
+2. Add consistent navigation and footer sections.
+3. Create an external CSS file to style all pages.
+4. Make the website responsive for mobile and desktop screens.
+5. Test the website using browser tools and HTML validation.
+6. Check accessibility, colour contrast and keyboard navigation.
+7. Make final improvements based on testing.
+8. Test the website in light mode and dark mode and check that all text is readable.

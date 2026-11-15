@@ -6,14 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore the menu at Leipomo-kahvila Voisilmä.">
+    <link rel="stylesheet" href="style.css">
     <title>Our Menu | Leipomo-kahvila Voisilmä</title>
 </head>
 
 <body>
 
     <header>
-        <h1>Leipomo-kahvila Voisilmä</h1>
-        <p>Good Food, Fresh Baking, Warm Welcome</p>
+        <div class="brand">
+            <img src="images/voisilma-logo.png"
+             alt="Voisilmä bakery-café logo">
+
+            <div class="brand-text">
+                <h1>Leipomo-kahvila Voisilmä</h1>
+                <p>Good Food, Fresh Baking, Warm Welcome</p>
+            </div>
+        </div>
 
         <nav aria-label="Main navigation">
             <ul>
@@ -29,11 +37,40 @@
 
         <h2>Our Menu</h2>
 
-        <p>Discover our selection of freshly baked products, food and refreshing drinks.</p>
+<p>Discover our selection of freshly baked products, food and refreshing drinks.</p>
 
-        <h2>Sweet Treats and Pastries</h2>
+<section class="allergen-filter">
+    <h2>Allergen Information</h2>
 
-        <ul>
+    <p>Select an allergen to find relevant information about our products.</p>
+
+    <fieldset>
+        <legend>Choose allergens:</legend>
+
+        <label>
+            <input type="checkbox" name="allergen" value="gluten">
+            Gluten
+        </label>
+
+        <label>
+            <input type="checkbox" name="allergen" value="lactose">
+            Lactose
+        </label>
+
+        <label>
+            <input type="checkbox" name="allergen" value="nuts">
+            Nuts
+        </label>
+
+        <label>
+            <input type="checkbox" name="allergen" value="eggs">
+            Eggs
+        </label>
+    </fieldset>
+</section>
+
+<h2>Sweet Treats and Pastries</h2>
+        <ul class="menu-grid">
             <li>
                 <p>Cinnamon Roll – €3.50</p>
                 <p>A soft, freshly baked roll with cinnamon filling.</p>
@@ -57,7 +94,7 @@
 
         <h2>Fresh Bakes</h2>
 
-        <ul>
+        <ul class="menu-grid">
             <li>
                 <p>Cheese Pastry – €3.80</p>
                 <p>A golden pastry with cheese filling.</p>
@@ -76,7 +113,7 @@
 
         <h2>Coffee and Drinks</h2>
 
-        <ul>
+        <ul class="menu-grid">
             <li>
                 <p>Fresh Coffee – €3.00</p>
                 <p>A warm cup of freshly prepared coffee.</p>
@@ -98,9 +135,6 @@
             </li>
         </ul>
 
-        <h2>Allergen Information</h2>
-
-        <p>Our products may contain gluten, lactose, nuts and eggs. Please ask our staff for detailed ingredient and allergen information.</p>
 
     </main>
 

@@ -1,0 +1,544 @@
+
+/******Main Design ***/
+
+:root {
+    /* Customer  demand colours */
+    --color-forest: #1F3D2B;
+    --color-cream: #F7F3E8;
+    --color-mustard: #C8902E;
+
+    /* Additional colours */
+    --color-white: #FFFFFF;
+    --color-border: #D8D2C3;
+
+    /* Fonts */
+    --font-heading: Georgia, serif;
+    --font-body: Arial, sans-serif;
+
+    /* Font sizes */
+    --text-small: 0.875rem;
+    --text-normal: 1rem;
+    --text-large: 1.25rem;
+
+    /* Spacing */
+    --space-small: 0.5rem;
+    --space-medium: 1rem;
+    --space-large: 2rem;
+    --space-extra-large: 3rem;
+
+    /* Layout */
+    --content-width: 1100px;
+}
+
+/* ****Website Style***/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--font-body);
+    font-size: var(--text-normal);
+    line-height: 1.6;
+
+    color: var(--color-forest);
+    background-color: var(--color-cream);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p {
+    margin-bottom: var(--space-medium);
+}
+
+main {
+    width: min(90%, var(--content-width));
+    margin: 0 auto;
+    padding: var(--space-large) 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: var(--space-medium);
+    text-align: left;
+}
+
+
+
+header {
+    background-color: var(--color-forest);
+    color: var(--color-cream);
+    text-align: center;
+    padding: var(--space-large) 1rem;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--color-cream);
+}
+
+header p {
+    margin: var(--space-small) 0 var(--space-large);
+}
+
+/* Navigation */
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-small);
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+
+    color: var(--color-cream);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    background-color: var(--color-mustard);
+    color: #17251D;
+}
+
+nav a:focus-visible {
+    outline: 3px solid var(--color-cream);
+    outline-offset: 4px;
+}
+
+/****Main Content***/
+
+main h2 {
+    color: var(--color-forest);
+    margin-top: var(--space-large);
+    margin-bottom: var(--space-medium);
+}
+
+main h2:first-child {
+    margin-top: 0;
+}
+
+main p {
+    max-width: 75ch;
+}
+
+/***Tables***/
+
+table {
+    margin: var(--space-large) 0;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+caption {
+    font-weight: bold;
+    text-align: left;
+    padding: var(--space-medium);
+}
+
+th {
+    background-color: var(--color-forest);
+    color: var(--color-cream);
+}
+
+td,
+th {
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* ***Footer***/
+
+footer {
+    background-color: var(--color-forest);
+    color: var(--color-cream);
+    text-align: center;
+    padding: var(--space-large) 1rem;
+    margin-top: var(--space-extra-large);
+}
+
+footer p {
+    margin: var(--space-small) 0;
+}
+
+
+main ul {
+    list-style: none;
+    padding: 0;
+}
+
+main ul li {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-left: 5px solid var(--color-mustard);
+    border-radius: 8px;
+
+    padding: var(--space-medium);
+    margin-bottom: var(--space-medium);
+}
+
+main ul li p:first-child {
+    font-family: var(--font-heading);
+    font-size: var(--text-large);
+    font-weight: bold;
+    color: var(--color-forest);
+    margin-bottom: var(--space-small);
+}
+
+main ul li p:last-child {
+    margin-bottom: 0;
+}
+
+/****Cake Order Form***/
+
+form {
+    max-width: 750px;
+    margin-top: var(--space-large);
+}
+
+fieldset {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--space-large);
+    margin-bottom: var(--space-large);
+    background-color: var(--color-white);
+}
+
+legend {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    color: var(--color-forest);
+    padding: 0 var(--space-small);
+}
+
+form p {
+    margin-bottom: var(--space-medium);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: var(--space-small);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font: inherit;
+    color: var(--color-forest);
+    background-color: var(--color-cream);
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: var(--space-small);
+}
+
+form button {
+    padding: 0.85rem 1.5rem;
+    font: inherit;
+    font-weight: bold;
+    color: var(--color-cream);
+    background-color: var(--color-forest);
+    border: 2px solid var(--color-forest);
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: var(--color-mustard);
+    color: #17251D;
+    border-color: var(--color-mustard);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    padding: 1rem 5%;
+    text-align: left;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.brand-text h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.brand-text p {
+    font-size: var(--text-small);
+    margin: 0.4rem 0 0;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: var(--space-medium);
+}
+
+.menu-grid li {
+    margin-bottom: 0;
+}
+
+.allergen-filter {
+    background-color: var(--color-white);
+    padding: var(--space-medium);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    margin-bottom: var(--space-large);
+}
+
+.allergen-filter fieldset {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: var(--space-medium);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.allergen-filter legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.allergen-filter label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+.allergen-filter input[type="checkbox"] {
+    accent-color: var(--color-forest);
+    width: 16px;
+    height: 16px;
+}
+
+/*  Mobile design*/
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 1rem 0.75rem;
+    }
+
+
+    .brand {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        gap: 0.6rem;
+    }
+
+    .brand img {
+        width: 65px;
+        height: 65px;
+        flex-shrink: 0;
+    }
+
+    .brand-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .brand-text p {
+        font-size: 0.75rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Navigation menu */
+
+    header nav {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    nav li {
+        width: auto;
+    }
+
+    nav a {
+        padding: 0.55rem 0.65rem;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    /* Main content */
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    main {
+        width: 92%;
+        padding: var(--space-medium) 0;
+    }
+
+    /* Forms */
+
+    fieldset {
+        padding: var(--space-medium);
+    }
+
+    /* Tables */
+
+    th,
+    td {
+        padding: 0.6rem 0.4rem;
+        font-size: 0.9rem;
+    }
+}
+
+/*Dark Mode*/
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        background-color: #17251D;
+        color: #F7F3E8;
+    }
+
+    header,
+    footer {
+        background-color: #1F3D2B;
+        color: #FFFFFF;
+    }
+
+    header h1,
+    header p {
+        color: #FFFFFF;
+    }
+
+    main h2,
+      main p,
+     main li,
+     label,
+     legend,
+     caption {
+     color: #F7F3E8;
+    }
+    main ul li,
+    table,
+    fieldset {
+        background-color: #263B30;
+        color: #F7F3E8;
+        border-color: #A6B5A9;
+    }
+
+    th {
+        background-color: #1F3D2B;
+        color: #FFFFFF;
+    }
+
+    td {
+        color: #F7F3E8;
+    }
+
+    input,
+    select,
+    textarea {
+        background-color: #263B30;
+        color: #FFFFFF;
+        border-color: #A6B5A9;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+        background-color: #C8902E;
+        color: #17251D;
+    }
+
+     .allergen-filter {
+       background-color: #263B30;
+      border-color: #A6B5A9;
+    }
+
+      .allergen-filter fieldset {
+     background-color: #263B30;
+     border-color: #A6B5A9;
+    }
+
+       .allergen-filter legend,
+        .allergen-filter label {
+         color: #F7F3E8;
+    }
+     main .menu-grid li p:first-child {
+     color: #F7F3E8;
+    }
+}
