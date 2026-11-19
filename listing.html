@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore the menu at Leipomo-kahvila Voisilmä.">
+
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+
     <title>Our Menu | Leipomo-kahvila Voisilmä</title>
 </head>
 
@@ -15,7 +18,7 @@
     <header>
         <div class="brand">
             <img src="images/voisilma-logo.png"
-             alt="Voisilmä bakery-café logo">
+                 alt="Voisilmä bakery-café logo">
 
             <div class="brand-text">
                 <h1>Leipomo-kahvila Voisilmä</h1>
@@ -37,104 +40,162 @@
 
         <h2>Our Menu</h2>
 
-<p>Discover our selection of freshly baked products, food and refreshing drinks.</p>
+        <p>
+            Discover our selection of freshly baked products,
+            food and refreshing drinks.
+        </p>
+        <search class="menu-search">
 
-<section class="allergen-filter">
-    <h2>Allergen Information</h2>
+            <h2>Find Your Favourite</h2>
 
-    <p>Select an allergen to find relevant information about our products.</p>
+            <div class="filter-buttons">
 
-    <fieldset>
-        <legend>Choose allergens:</legend>
+                <button type="button"
+                        data-filter="all"
+                        aria-pressed="true">
+                    All
+                </button>
 
-        <label>
-            <input type="checkbox" name="allergen" value="gluten">
-            Gluten
-        </label>
+                <button type="button"
+                        data-filter="sweet"
+                        aria-pressed="false">
+                    Sweet Treats
+                </button>
 
-        <label>
-            <input type="checkbox" name="allergen" value="lactose">
-            Lactose
-        </label>
+                <button type="button"
+                        data-filter="fresh"
+                        aria-pressed="false">
+                    Fresh Bakes
+                </button>
 
-        <label>
-            <input type="checkbox" name="allergen" value="nuts">
-            Nuts
-        </label>
+                <button type="button"
+                        data-filter="drinks"
+                        aria-pressed="false">
+                    Coffee and Drinks
+                </button>
 
-        <label>
-            <input type="checkbox" name="allergen" value="eggs">
-            Eggs
-        </label>
-    </fieldset>
-</section>
+            </div>
 
-<h2>Sweet Treats and Pastries</h2>
-        <ul class="menu-grid">
-            <li>
-                <p>Cinnamon Roll – €3.50</p>
-                <p>A soft, freshly baked roll with cinnamon filling.</p>
-            </li>
+            <p id="menu-status" role="status" aria-live="polite">
+                Showing all 11 menu items.
+            </p>
 
-            <li>
-                <p>Blueberry Muffin – €3.00</p>
-                <p>A delicious muffin filled with blueberries.</p>
-            </li>
+        </search>
+        <section class="menu-section">
 
-            <li>
-                <p>Butter Croissant – €3.20</p>
-                <p>A golden and flaky buttery pastry.</p>
-            </li>
+            <h2>Sweet Treats and Pastries</h2>
 
-            <li>
-                <p>Chocolate Cake – €4.50</p>
-                <p>A delicious chocolate treat.</p>
-            </li>
-        </ul>
+            <ul class="menu-grid">
 
-        <h2>Fresh Bakes</h2>
+                <li data-category="sweet">
+                    <p>
+                        <strong>Cinnamon Roll</strong> –
+                        <span class="price">€3.50</span>
+                    </p>
+                    <p>A soft, freshly baked roll with cinnamon filling.</p>
+                </li>
 
-        <ul class="menu-grid">
-            <li>
-                <p>Cheese Pastry – €3.80</p>
-                <p>A golden pastry with cheese filling.</p>
-            </li>
+                <li data-category="sweet">
+                    <p>
+                        <strong>Blueberry Muffin</strong> –
+                        <span class="price">€3.00</span>
+                    </p>
+                    <p>A delicious muffin filled with blueberries.</p>
+                </li>
 
-            <li>
-                <p>Ham Sandwich – €6.50</p>
-                <p>A fresh sandwich with ham, cheese and salad.</p>
-            </li>
+                <li data-category="sweet">
+                    <p>
+                        <strong>Butter Croissant</strong> –
+                        <span class="price">€3.20</span>
+                    </p>
+                    <p>A golden and flaky buttery pastry.</p>
+                </li>
 
-            <li>
-                <p>Vegetable Pie – €4.80</p>
-                <p>A savoury pie filled with vegetables.</p>
-            </li>
-        </ul>
+                <li data-category="sweet">
+                    <p>
+                        <strong>Chocolate Cake</strong> –
+                        <span class="price">€4.50</span>
+                    </p>
+                    <p>A delicious chocolate treat.</p>
+                </li>
 
-        <h2>Coffee and Drinks</h2>
+            </ul>
 
-        <ul class="menu-grid">
-            <li>
-                <p>Fresh Coffee – €3.00</p>
-                <p>A warm cup of freshly prepared coffee.</p>
-            </li>
+        </section>
+        <section class="menu-section">
 
-            <li>
-                <p>Tea – €2.80</p>
-                <p>A comforting cup of tea.</p>
-            </li>
+            <h2>Fresh Bakes</h2>
 
-            <li>
-                <p>Hot Chocolate – €3.80</p>
-                <p>A warm chocolate drink.</p>
-            </li>
+            <ul class="menu-grid">
 
-            <li>
-                <p>Fresh Juice – €3.50</p>
-                <p>A refreshing fruit juice.</p>
-            </li>
-        </ul>
+                <li data-category="fresh">
+                    <p>
+                        <strong>Cheese Pastry</strong> –
+                        <span class="price">€3.80</span>
+                    </p>
+                    <p>A golden pastry with cheese filling.</p>
+                </li>
 
+                <li data-category="fresh">
+                    <p>
+                        <strong>Ham Sandwich</strong> –
+                        <span class="price">€6.50</span>
+                    </p>
+                    <p>A fresh sandwich with ham, cheese and salad.</p>
+                </li>
+
+                <li data-category="fresh">
+                    <p>
+                        <strong>Vegetable Pie</strong> –
+                        <span class="price">€4.80</span>
+                    </p>
+                    <p>A savoury pie filled with vegetables.</p>
+                </li>
+
+            </ul>
+
+        </section>
+        <section class="menu-section">
+
+            <h2>Coffee and Drinks</h2>
+
+            <ul class="menu-grid">
+
+                <li data-category="drinks">
+                    <p>
+                        <strong>Fresh Coffee</strong> –
+                        <span class="price">€3.00</span>
+                    </p>
+                    <p>A warm cup of freshly prepared coffee.</p>
+                </li>
+
+                <li data-category="drinks">
+                    <p>
+                        <strong>Tea</strong> –
+                        <span class="price">€2.80</span>
+                    </p>
+                    <p>A comforting cup of tea.</p>
+                </li>
+
+                <li data-category="drinks">
+                    <p>
+                        <strong>Hot Chocolate</strong> –
+                        <span class="price">€3.80</span>
+                    </p>
+                    <p>A warm chocolate drink.</p>
+                </li>
+
+                <li data-category="drinks">
+                    <p>
+                        <strong>Fresh Juice</strong> –
+                        <span class="price">€3.50</span>
+                    </p>
+                    <p>A refreshing fruit juice.</p>
+                </li>
+
+            </ul>
+
+        </section>
 
     </main>
 
