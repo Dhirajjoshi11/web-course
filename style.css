@@ -113,7 +113,7 @@ header p {
 
 /* Navigation */
 
-nav ul {
+nav > ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,6 +144,62 @@ nav a:focus-visible {
     outline: 3px solid var(--color-cream);
     outline-offset: 4px;
 }
+
+/* Quick Links popover */
+.quick-links {
+    position: relative;
+}
+
+.quick-links button {
+    color: var(--color-cream);
+    background-color: transparent;
+    border: none;
+    padding: 0.75rem 1rem;
+    font: inherit;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quick-links button:hover {
+    background-color: var(--color-mustard);
+    color: #17251D;
+}
+
+.quick-links button:focus-visible {
+    outline: 3px solid var(--color-cream);
+    outline-offset: 4px;
+}
+
+#quick-links-menu {
+    position: fixed;
+    inset: auto;
+    top: 125px;
+    right: 5%;
+    min-width: 190px;
+    padding: 0.5rem;
+    margin: 0;
+    background-color: var(--color-forest);
+    border: 1px solid var(--color-cream);
+    border-radius: 6px;
+    list-style: none;
+}
+
+#quick-links-menu li {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+#quick-links-menu a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    color: var(--color-cream);
+    text-decoration: none;
+    text-align: left;
+}
+
+
 
 /****Main Content***/
 
@@ -421,7 +477,7 @@ header nav {
         margin-left: 0;
     }
 
-    nav ul {
+    nav > ul {
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -438,9 +494,7 @@ header nav {
         font-size: 0.85rem;
         text-align: center;
     }
-
     /* Main content */
-
     h2 {
         font-size: 1.6rem;
     }
@@ -583,6 +637,10 @@ header nav {
 .filter-buttons button:focus-visible {
     outline: 3px solid var(--color-mustard);
     outline-offset: 3px;
+}
+button:focus-visible {
+    outline: 3px solid var(--color-mustard);
+    outline-offset: 4px;
 }
 
 @media (prefers-color-scheme: dark) {
